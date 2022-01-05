@@ -1,0 +1,27 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="welcome">
+        <div>
+            <form (submit)="sendSms($event)" class="create-note">
+                <input *ngIf="!contactId" name="phoneNo"  placeholder="Phone Number" autocomplete="off" required/> 
+                <textarea (input)="handleChange($event)" name="message" placeholder="Type the message" rows="3" value={{body.message}} required ></textarea>
+                <button type="submit"> Send </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<ng-template #mymodal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Success</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">Messsge sent Successfully</div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn-red btn-outline-danger">
+            Yes
+        </button>
+    </div> -->
+</ng-template>

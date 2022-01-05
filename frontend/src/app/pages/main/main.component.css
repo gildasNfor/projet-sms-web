@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.welcome {
+  font-family: "Ubuntu", sans-serif;
+  width: calc(100vw - 15vw);
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}

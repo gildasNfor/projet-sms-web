@@ -1,0 +1,24 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="main">
+        <div class="note" *ngFor="let message of messages">
+            <div>
+                <h3>
+                    {{message.content}}
+                </h3>
+                <h6 class="bottom">
+                    message sent on {{message.sent_on.split("T")[0]}} at {{message.sent_on.split("T")[1]}}
+                </h6>
+            </div>
+        </div>
+        <!-- <div class="paging">
+            <div class="container">
+                <ul class="pagination">
+                    <li *ngFor="let item of pages; let i = index" class="page-item" [attr.data-index]="i">
+                        <a class="page-link" (click)="getPaginatedMessages($event)">{{i + 1}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+</div>

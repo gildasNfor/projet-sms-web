@@ -1,0 +1,30 @@
+<div class="box">
+    <div class="login__container">
+        <h3 class="header">Welcome To your SMS App</h3>
+        <p>Enter your credentials to access your account</p>
+        <form (submit)="login($event)"> 
+            <div class="form-group">
+                <i class="fas fa-user icons"></i>
+                <input (input)="handleChange($event)" name="username" class="form-control input-field" placeholder="Enter your username" />
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock icons"></i>
+                <input (input)="handleChange($event)" name="password" type="password" class="form-control input-field" placeholder="Enter your Password" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="form-control btn-lg button">Sign In</button>
+            </div>
+            <div class="form-group">
+                <p class="header">
+                    <a routerLink="/forgot-password" routerLinkActive="active">Forgot Password ?</a>
+                </p>
+            </div>
+            <div class="form-group">
+                <p class="header">
+                    Don't have an account ?
+                        <a routerLink="/register" routerLinkActive="active">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
