@@ -1,0 +1,49 @@
+<div class="box">
+  <app-sidebar></app-sidebar>
+  <div class="main">
+    <div class="note" *ngFor="let contact of contacts">
+      <div>
+        <h3>{{ contact.name }}</h3>
+        <h4>{{ contact.phoneNo }}</h4>
+      </div>
+      <div>
+        <button id="{{ contact._id }}" routerLink="/send-sms/{{ contact._id }}" routerLinkActive="active"
+          class="btn mx-2">
+          Send SMS
+        </button>
+        <button id="{{ contact._id }}" routerLink="/messages/{{ contact._id }}" routerLinkActive="active"
+          class="btn btn-success mx-2">
+          View Messages sent
+        </button>
+
+        <button id="{{ contact._id }}" (click)="open(mymodal, $event)" class="btn btn-red">
+          Delete Contact
+        </button>
+      </div>
+    </div>
+    <div class="paging">
+      <div class="container">
+        <ul class="pagination">
+          <li *ngFor="let item of pages; let i = index" class="page-item" [attr.data-index]="i">
+            <a class="page-link" (click)="getPaginatedContacts($event)">{{i + 1}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Delete Contact</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">Are you sure you want to delete Contact</div>
+  <div class="modal-footer">
+    <button type="button" class="btn-red btn-outline-danger" (click)="close(mymodal)">
+      Yes
+    </button>
+  </div>
+</ng-template>

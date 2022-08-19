@@ -1,0 +1,25 @@
+<div class="sidebar__container">
+    <div class="logo">
+        <i class="fas fa-address-book icon"></i>
+        <span>SMS</span>
+    </div>
+    <!-- <div class="button__box">
+        <button class="btn block primary block"><span>New Quiz</span><i class="fa fa-plus-circle fa-lg"
+                aria-hidden="true"></i></button>
+    </div> -->
+    <div class="button__box">
+        <button routerLink="/contacts" routerLinkActive="active" class="btn block primary block"><span class="items">Contacts</span></button>
+    </div>
+    <div class="button__box">
+        <button routerLink="/create-contact" routerLinkActive="active" class="btn block primary block"><span class="items">Save Contact</span></button>
+    </div><div class="button__box">
+        <button routerLink="/send-sms" routerLinkActive="active" class="btn block primary block"><span class="items">Send SMS</span></button>
+    </div>
+    <!-- <div class="button__box">
+        <button   routerLink="/messages" routerLinkActive="active"   class="btn block primary block"><span class="items">View Messages</span></button>
+    </div> -->
+  
+     <div class="button__box">
+        <button (click)="logout()" class="btn btn-red block  block"><span class="items">Log Out</span></button>
+    </div>
+</div>

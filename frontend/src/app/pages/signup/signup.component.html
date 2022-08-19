@@ -1,0 +1,33 @@
+<div class="box">
+    <div class="login__container">
+        <h3 class="header">Welcome To your SMS App</h3>
+        <p>Fill the form to create an account</p>
+        <form (submit)="register($event)">
+            <div class="form-group">
+                <i class="fas fa-user icons"></i>
+                <input (input)="handleChange($event)" name="username" class="form-control input-field" placeholder="Enter your name" />
+            </div>
+            <div class="form-group">
+                <i class="fas fa-envelope icons"></i>
+                <input type="email" (input)="handleChange($event)" name="email" class="form-control input-field" placeholder="Enter your Email" />
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock icons"></i>
+                <input (input)="handleChange($event)" name="password" type="password" class="form-control input-field" placeholder="Enter your Password" />
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock icons"></i>
+                <input (input)="handleChange($event)" name="confirm_password" type="password" class="form-control input-field" placeholder="Confirm Password" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="form-control btn-lg button">Sign Up</button>
+            </div>
+            <div class="form-group">
+                <p class="header">
+                    Already have an account?
+                    <a routerLink="/login" routerLinkActive="active">Sign In</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.box {
+  display: flex;
+  padding: 0;
+  /* margin: 0; */
+  /* width: 100%; */
+  min-width: fit-content;
+  overflow-y: scroll;
+}
+
+.main {
+  font-family: "Ubuntu", sans-serif;
+  /* width: calc(100vw - 15vw);
+   */
+  width: 1000px;
+  height: 100vh;
+  /* text-align: center; */
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  min-height: 100px;
+  margin: 16px;
+  /* float: left; */
+  text-align: left;
+}
+
+.paging {
+  padding-left: 100px;
+  width: 300px;
+  margin: auto;
+}

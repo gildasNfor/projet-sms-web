@@ -1,0 +1,43 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="welcome">
+        <div class="box">
+            <div class="login__container">
+                <h3 class="header">Create a New Contact</h3>
+                <p>Enter the new Contacts Details </p>
+                <form (submit)="createContact($event)">
+                    <div class="form-group">
+                        <i class="fas fa-user icons"></i>
+                        <input (input)="handleChange($event)" name="name" value={{newContact.name}} class="form-control input-field"
+                            placeholder="Enter the Contacts name" />
+                    </div>
+                    <div class="form-group">
+                    <i class="fas fa-phone icons"></i>
+                        <input (input)="handleChange($event)" name="phoneNo" type="tel" value={{newContact.phoneNo}} class="form-control input-field"
+                            placeholder="Enter the Contacts Number" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn-lg button">Create Contact</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #mymodal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">New Contact</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">Contact was created Successfully</div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn-red btn-outline-danger">
+            Yes
+        </button>
+    </div> -->
+</ng-template>
